@@ -2,7 +2,7 @@ defmodule NervesSystemX8664.MixProject do
   use Mix.Project
 
   @github_organization "nerves-project"
-  @app :nerves_system_x86_64
+  @app :nerves_system_x86_64_ark1124h
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -65,7 +65,7 @@ defmodule NervesSystemX8664.MixProject do
   defp deps do
     [
       {:nerves, "~> 1.11", runtime: false},
-      {:nerves_system_br, "1.32.5", runtime: false},
+      {:nerves_system_br, "1.32.3", runtime: false},
       {:nerves_toolchain_x86_64_nerves_linux_musl, "~> 13.2.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
