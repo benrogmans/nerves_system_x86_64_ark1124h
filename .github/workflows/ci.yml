@@ -7,10 +7,6 @@ env:
   ELIXIR_VERSION: 1.18.4-otp-28
   NERVES_BOOTSTRAP_VERSION: 1.14.0
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   get-br-dependencies:
     runs-on: ubuntu-22.04
@@ -23,10 +19,7 @@ jobs:
           otp-version: ${{ env.OTP_VERSION }}
           elixir-version: ${{ env.ELIXIR_VERSION }}
           nerves-bootstrap-version: ${{ env.NERVES_BOOTSTRAP_VERSION }}
-          push-to-download-site: true
-          download-site-bucket-uri: ${{ vars.DOWNLOAD_SITE_BUCKET_URI }}
-          aws-role: ${{ secrets.AWS_ROLE }}
-          aws-region: ${{ vars.AWS_REGION }}
+          save-dl-cache: false
   build-system:
     needs: [get-br-dependencies]
     runs-on: ubuntu-22.04
