@@ -11,6 +11,7 @@ path = [
  "REUSE.toml",
  "mix.exs",
  "mix.lock",
+ ".tool-versions",
  "VERSION"
 ]
 precedence = "aggregate"
@@ -19,7 +20,8 @@ SPDX-License-Identifier = "CC0-1.0"
 
 [[annotations]]
 path = [
- "README.md"
+ "README.md",
+ "README_CUSTOM_SYSTEM.md"
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2016 Frank Hunleth"
